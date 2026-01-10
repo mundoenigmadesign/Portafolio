@@ -1,0 +1,33 @@
+/* Animación de la Grilla de Fondo */
+@keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+.animate-grid-move {
+    animation: gridMove 20s linear infinite;
+}
+
+/* Animación de Entrada (Fade In Up) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Perspectiva 3D para el fondo */
+.perspective-500 {
+    perspective: 500px;
+}
+.rotate-x-60 {
+    transform: rotateX(60deg);
+}

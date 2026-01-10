@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENIGMA DESIGN | Digital Architect</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00f3ff',
+                        'neon-purple': '#bd00ff',
+                        'dark-bg': '#050505',
+                        'card-bg': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        'head': ['Orbitron', 'sans-serif'],
+                        'body': ['Rajdhani', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-bg text-white font-body overflow-x-hidden relative">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:50px_50px] animate-grid-move opacity-40 transform perspective-500 rotate-x-60"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent"></div>
+    </div>
+
+   <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-8 flex justify-between items-center">
+        
+        <div class="flex items-center gap-3 group cursor-pointer">
+            <div class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-black/50 border border-gray-800 rounded-sm group-hover:border-neon-cyan transition-all duration-500 overflow-hidden">
+                <div class="absolute inset-0 bg-neon-cyan/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <svg class="w-6 h-6 md:w-8 md:h-8 text-neon-cyan transform group-hover:scale-110 transition-transform duration-500" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 6L6 21V43L32 58L58 43V21L32 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-50"/>
+                    <path d="M32 6V32M58 21L32 32L6 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M32 42L32 58" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="29" y="29" width="6" height="6" fill="currentColor" class="animate-pulse"/>
+                    <path d="M44 28H54" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="flex flex-col">
+                <span class="text-xl md:text-2xl font-head font-bold tracking-[0.15em] leading-none">ENIGMA</span>
+                <span class="text-[0.6rem] md:text-xs font-head text-gray-400 tracking-[0.3em] group-hover:text-neon-cyan transition-colors duration-300">DESIGN<span class="text-neon-cyan animate-pulse">_</span></span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="#" class="hidden md:block text-xl hover:text-neon-cyan transition-colors"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="hidden md:block text-xl hover:text-neon-cyan transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/5491112345678" class="border border-neon-cyan text-neon-cyan px-4 md:px-6 py-2 font-head text-xs md:text-sm tracking-wider hover:bg-neon-cyan hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+                INICIAR PROYECTO
+            </a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <p class="text-neon-cyan tracking-[0.3em] font-bold mb-4 opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">ESTUDIO DE DESARROLLO WEB</p>
+        
+        <h1 class="glitch-title text-5xl md:text-8xl font-head font-black mb-8 relative" data-text="CREAMOS EL FUTURO">
+            CREAMOS EL FUTURO
+        </h1>
+        
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-in-up" style="animation-delay: 0.6s;">
+            No hacemos sitios web. Construimos <span class="text-neon-cyan font-bold">ecosistemas digitales</span> de alto rendimiento. Diseño disruptivo. Código limpio.
+        </p>
+        
+        <a href="#portfolio" class="opacity-0 animate-fade-in-up flex items-center gap-3 text-sm font-head hover:text-neon-cyan transition-colors border-b border-transparent hover:border-neon-cyan pb-1" style="animation-delay: 0.9s;">
+            EXPLORAR TRABAJOS <i class="fa-solid fa-arrow-down animate-bounce"></i>
+        </a>
+    </header>
+
+    <section id="portfolio" class="py-24 px-6 md:px-12 relative z-10 bg-gradient-to-b from-transparent to-dark-bg">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-3xl md:text-4xl font-head">PROYECTOS_SELECCIONADOS</h2>
+            <div class="h-px bg-gray-800 flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
+            
+            <a href="https://TU-USUARIO.github.io/neo-kicks-ecommerce/" target="_blank" class="group relative block h-[450px] bg-card-bg border border-gray-800 hover:border-neon-cyan transition-all duration-500 overflow-hidden rounded-sm" data-tilt>
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" style="background-image: url('https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent p-8 flex flex-col justify-center">
+                    <div class="text-neon-cyan font-head text-xs tracking-widest mb-2">ECOMMERCE / STREETWEAR</div>
+                    <h3 class="text-4xl md:text-5xl font-head text-white mb-4 group-hover:text-neon-cyan transition-colors">NEO-KICKS</h3>
+                    <p class="text-gray-400 max-w-md mb-6 group-hover:text-white transition-colors">Tienda futurista con efectos 3D Tilt, carrito interactivo y diseño Acid-Cyberpunk.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">HTML5</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">TAILWIND</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">JS</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://TU-USUARIO.github.io/la-fornace-pizzeria/" target="_blank" class="group relative block h-[450px] bg-card-bg border border-gray-800 hover:border-neon-purple transition-all duration-500 overflow-hidden rounded-sm" data-tilt>
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" style="background-image: url('https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent p-8 flex flex-col justify-center">
+                    <div class="text-neon-purple font-head text-xs tracking-widest mb-2">GASTRONOMÍA / LANDING</div>
+                    <h3 class="text-4xl md:text-5xl font-head text-white mb-4 group-hover:text-neon-purple transition-colors">LA FORNACE</h3>
+                    <p class="text-gray-400 max-w-md mb-6 group-hover:text-white transition-colors">Landing page inmersiva para pizzería con menú filtrable y pedidos directos a WhatsApp.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">UX/UI</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">CSS GRID</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://TU-USUARIO.github.io/reseller-panel-v4/" target="_blank" class="lg:col-span-2 group relative block h-[450px] bg-card-bg border border-gray-800 hover:border-white transition-all duration-500 overflow-hidden rounded-sm" data-tilt>
+                <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent p-8 md:p-12 flex flex-col justify-center">
+                    <div class="text-white font-head text-xs tracking-widest mb-2">WEB APP / DASHBOARD</div>
+                    <h3 class="text-4xl md:text-5xl font-head text-white mb-4">RESELLER V4</h3>
+                    <p class="text-gray-400 max-w-xl mb-6 group-hover:text-white transition-colors">Sistema de gestión de clientes y cuentas con base de datos real, autenticación y panel de control administrativo.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">SUPABASE</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">AUTH</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">CRUD</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 border-t border-gray-900 bg-black text-center relative z-10">
+        <h2 class="text-3xl md:text-5xl font-head mb-6">¿LISTO PARA ESCALAR?</h2>
+        <p class="text-gray-500 mb-10">Transformamos tu idea en código de alto nivel.</p>
+        <a href="mailto:hola@enigmadesign.com" class="text-neon-cyan text-xl md:text-2xl hover:text-white transition-colors border-b-2 border-neon-cyan hover:border-white pb-1">
+            hola@enigmadesign.com
+        </a>
+        <div class="mt-20 text-gray-600 text-sm">
+            &copy; 2024 ENIGMA DESIGN. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
