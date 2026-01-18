@@ -65,7 +65,7 @@
         <div class="flex items-center gap-6">
             <a href="#" class="hidden md:block text-xl hover:text-neon-cyan transition-colors"><i class="fa-brands fa-github"></i></a>
             <a href="#" class="hidden md:block text-xl hover:text-neon-cyan transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://wa.me/5491112345678" class="border border-neon-cyan text-neon-cyan px-4 md:px-6 py-2 font-head text-xs md:text-sm tracking-wider hover:bg-neon-cyan hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+            <a href="#contacto" class="border border-neon-cyan text-neon-cyan px-4 md:px-6 py-2 font-head text-xs md:text-sm tracking-wider hover:bg-neon-cyan hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,243,255,0.3)]">
                 INICIAR PROYECTO
             </a>
         </div>
@@ -122,8 +122,72 @@
                 </div>
             </a>
 
+             <a href="https://clubatleticomarin.com/" target="_blank" class="group relative block h-[450px] bg-card-bg border border-gray-800 hover:border-neon-purple transition-all duration-500 overflow-hidden rounded-sm" data-tilt>
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" style="background-image: url('https://i.postimg.cc/ZKmDXvwD/Captura-desde-2026-01-17-22-27-03.png');"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent p-8 flex flex-col justify-center">
+                    <div class="text-neon-purple font-head text-xs tracking-widest mb-2">CLUB MARIN</div>
+                    <h3 class="text-4xl md:text-5xl font-head text-white mb-4 group-hover:text-neon-purple transition-colors">CLUB ATLETICO MARIN</h3>
+                    <p class="text-gray-400 max-w-md mb-6 group-hover:text-white transition-colors">Landing page para el Club Atletico Marin.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">UX/UI</span>
+                        <span class="px-3 py-1 border border-gray-700 text-xs text-gray-500">CSS GRID</span>
+                    </div>
+                </div>
+            </a>
+
            
 
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto bg-card-bg border border-gray-800 p-8 md:p-12 rounded-sm relative overflow-hidden group">
+            
+            <div class="absolute inset-0 border border-transparent group-hover:border-neon-cyan/30 transition-colors duration-500 pointer-events-none"></div>
+            
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-5xl font-head text-white mb-2">INICIAR <span class="text-neon-cyan">MISIÓN</span></h2>
+                <p class="text-gray-400 font-body text-lg">Cuéntanos sobre tu objetivo. Recibe la estrategia en tu dispositivo.</p>
+            </div>
+
+            <form id="telegramForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative">
+                        <input type="text" id="nombre" required 
+                            class="w-full bg-dark-bg border border-gray-700 text-white px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors font-body tracking-wider placeholder-gray-600"
+                            placeholder="NOMBRE / ORGANIZACIÓN">
+                        <i class="fa-solid fa-user absolute right-4 top-4 text-gray-600"></i>
+                    </div>
+                    
+                    <div class="relative">
+                        <input type="tel" id="telefono" required 
+                            class="w-full bg-dark-bg border border-gray-700 text-white px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors font-body tracking-wider placeholder-gray-600"
+                            placeholder="WHATSAPP / TELÉFONO">
+                        <i class="fa-solid fa-phone absolute right-4 top-4 text-gray-600"></i>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <select id="tipoWeb" class="w-full bg-dark-bg border border-gray-700 text-gray-300 px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors font-body tracking-wider appearance-none cursor-pointer">
+                        <option value="No especificado" disabled selected>SELECCIONAR TIPO DE PROYECTO ▼</option>
+                        <option value="Landing Page (Institucional)">LANDING PAGE (INSTITUCIONAL)</option>
+                        <option value="Catálogo WhatsApp">CATÁLOGO VENTA WHATSAPP</option>
+                        <option value="Sistema de Turnos">SISTEMA DE TURNOS</option>
+                        <option value="E-commerce Completo">E-COMMERCE COMPLETO</option>
+                    </select>
+                </div>
+
+                <div class="relative">
+                    <textarea id="mensaje" rows="4" 
+                        class="w-full bg-dark-bg border border-gray-700 text-white px-4 py-3 focus:outline-none focus:border-neon-cyan transition-colors font-body tracking-wider placeholder-gray-600"
+                        placeholder="DETALLES DE LA MISIÓN (Rubro, referencias, objetivos...)"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-transparent border border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-black font-head font-bold py-4 text-xl tracking-[0.2em] transition-all duration-300 uppercase relative overflow-hidden group-btn">
+                    <span class="relative z-10">TRANSMITIR DATOS</span>
+                    <div class="absolute inset-0 bg-neon-cyan transform scale-x-0 group-btn-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </button>
+            </form>
         </div>
     </section>
 

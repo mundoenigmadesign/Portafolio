@@ -56,3 +56,63 @@ tiltElements.forEach(card => {
         card.style.zIndex = '1';
     });
 });
+
+// ... (Tu código anterior del efecto Matrix y Tilt queda igual) ...
+
+// LÓGICA DEL FORMULARIO A TELEGRAM
+document.getElementById('telegramForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const btn = this.querySelector('button');
+    const originalText = btn.innerHTML;
+    
+    // Feedback visual de "Enviando..."
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> PROCESANDO...';
+    btn.disabled = true;
+
+    // 1. Capturar datos
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const tipoWeb = document.getElementById('tipoWeb').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // 2. Formato del mensaje (Estilo Hacker/Terminal)
+    const texto = `
+📟 *NUEVA TRANSMISIÓN RECIBIDA*
+============================
+👤 *AGENTE:* ${nombre}
+📱 *CONTACTO:* ${telefono}
+⚙️ *OBJETIVO:* ${tipoWeb}
+----------------------------
+📝 *DATA:* ${mensaje}
+============================
+End of transmission.
+    `;
+
+    // 3. Configuración (¡PONER TUS DATOS REALES AQUÍ!)
+    const token = 'TU_TOKEN_DEL_BOT_AQUI'; 
+    const chat_id = 'TU_CHAT_ID_AQUI'; 
+    
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(texto)}&parse_mode=Markdown`;
+
+    // 4. Enviar
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                // Éxito: Resetear form y mostrar mensaje
+                document.getElementById('telegramForm').reset();
+                alert('✅ DATOS TRANSMITIDOS CON ÉXITO. EL EQUIPO ENIGMA TE CONTACTARÁ.');
+            } else {
+                alert('❌ ERROR EN LA TRANSMISIÓN. INTENTE VÍA WHATSAPP.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('❌ ERROR DE RED.');
+        })
+        .finally(() => {
+            // Restaurar botón
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        });
+});
